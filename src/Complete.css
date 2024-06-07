@@ -1,0 +1,27 @@
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url('./img/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.complete_container {
+    background: white;
+    justify-content: center;
+    align-items: center;
+    background-color: #fadbdb00;
+}
+
+.logo {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+.bank_header {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
