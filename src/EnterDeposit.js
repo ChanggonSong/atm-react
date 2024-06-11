@@ -25,12 +25,12 @@ function EnterDeposit() {
     }
 
     try {
-        const response = await fetch('/deposit', {
+        const response = await fetch('/accounts/1/deposit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ amo : amount }),
+          body: JSON.stringify({ amount : amount }),
         });
   
         if (response.ok) {
