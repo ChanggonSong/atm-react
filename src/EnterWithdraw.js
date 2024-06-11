@@ -25,12 +25,12 @@ function EnterWithdraw() {
     }
 
     try {
-        const response = await fetch('/withdraw', {
+        const response = await fetch('/accounts/1/withdraw', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ amo : amount }),
+          body: JSON.stringify({ amount : amount }),
         });
   
         if (response.ok) {
