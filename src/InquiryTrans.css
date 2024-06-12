@@ -11,9 +11,11 @@
 
 .inquiry_container {
     background: white;
-    justify-content: center;
-    align-items: center;
-    background-color: #fadbdb00;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(34, 90, 163, 0.148);
+    text-align: center;
+    width: 400px; 
 }
 
 .logo {
