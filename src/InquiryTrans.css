@@ -10,6 +10,8 @@
 }
 
 .inquiry_container {
+    display: flex;
+    flex-direction: column;
     background: white;
     padding: 10px;
     border-radius: 10px;
@@ -33,3 +35,4 @@
     margin-bottom: 10px;
     font-size: 11px;
 }
+
