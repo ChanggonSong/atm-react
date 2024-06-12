@@ -14,7 +14,7 @@ import InquiryTrans from './InquiryTrans';
 function App() {
   return (
       <div>
-        <Router basename={process.env.PUBLIC_URL}> // 애플리케이션이 GitHub Pages의 프로젝트 이름을 기준으로 URL을 처리하도록 함
+        <Router basename={process.env.PUBLIC_URL}> 
       <Routes>
         <Route path="/" element={<FirstPage />} />
         <Route path="/login" element={<FirstPage />} />
