@@ -44,7 +44,7 @@ function SignUp() {
           navigate('/login');
         } else {
             const responseData = await response.json();
-            if (response.status === 409) {
+            if (response.status === 400) {
                 setError('이미 회원가입된 사용자입니다.');
               } else {
                 setError(responseData.message || '회원가입 실패. 입력한 정보를 다시 확인하세요.');
