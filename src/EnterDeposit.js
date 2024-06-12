@@ -34,7 +34,8 @@ function EnterDeposit() {
         });
   
         if (response.ok) {
-          navigate('/completeDP');
+            const data = await response.json();
+            navigate('/completeDP', {state : data.data.balance} );
         } else {
           setError('금액을 다시 입력해주세요.');
         }
