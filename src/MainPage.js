@@ -72,7 +72,6 @@ function MainPage(){
                     <div className={styles.main_bank_name}>ReAction Bank</div>
                     <div className={styles.logout} onClick={handleLogout}>로그아웃</div>
                 </div>
-                <div className={styles.greeting}>좋은 하루 보내세요, {sessionStorage.getItem('loginUser')}님.</div>
             </div>
             
             <div className={styles.main_container}>
