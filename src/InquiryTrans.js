@@ -49,7 +49,7 @@ const StatementList = () => {
                 <div className="bank_header">ReAction Bank</div>
                 <h2>거래 내역</h2>
                 {error && <div className="error_message">{error}</div>}
-                <table>
+                <table className="inquiryTable">
                     <thead>
                       <tr>
                           <th>날짜</th>
