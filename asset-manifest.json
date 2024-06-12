@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/atm-react/static/css/main.b6a60bcf.css",
-    "main.js": "/atm-react/static/js/main.34a2dc21.js",
+    "main.css": "/atm-react/static/css/main.7e524ce2.css",
+    "main.js": "/atm-react/static/js/main.b0e2b05d.js",
     "static/js/453.efdc4e7a.chunk.js": "/atm-react/static/js/453.efdc4e7a.chunk.js",
     "static/media/background.png": "/atm-react/static/media/background.3c64388ee8acafca8971.png",
     "static/media/logo.png": "/atm-react/static/media/logo.433d15e1194e996ce09e.png",
     "index.html": "/atm-react/index.html",
-    "main.b6a60bcf.css.map": "/atm-react/static/css/main.b6a60bcf.css.map",
-    "main.34a2dc21.js.map": "/atm-react/static/js/main.34a2dc21.js.map",
+    "main.7e524ce2.css.map": "/atm-react/static/css/main.7e524ce2.css.map",
+    "main.b0e2b05d.js.map": "/atm-react/static/js/main.b0e2b05d.js.map",
     "453.efdc4e7a.chunk.js.map": "/atm-react/static/js/453.efdc4e7a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6a60bcf.css",
-    "static/js/main.34a2dc21.js"
+    "static/css/main.7e524ce2.css",
+    "static/js/main.b0e2b05d.js"
   ]
 }
