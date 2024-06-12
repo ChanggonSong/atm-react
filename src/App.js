@@ -8,16 +8,19 @@ import CompleteDP from './CompleteDP';
 import CompleteWD from './CompleteWD';
 import CompleteTF from './CompleteTF';
 import InquiryTrans from './InquiryTrans';
-
+import MainPage from './MainPage';
+import Transfer from './Transfer';
 
 function App() {
   return (
-    <div>
-        <Router basename={process.env.PUBLIC_URL}> 
+      <div>
+        <Router>
           <Routes>
             <Route path="/" element={<FirstPage />} />
             <Route path="/login" element={<FirstPage />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/main" element={<MainPage />} />
+            <Route path='/transfer' element={<Transfer />}/>
             <Route path="/enterDP" element={<EnterDeposit />} />
             <Route path="/enterWD" element={<EnterWithdraw />} />
             <Route path="/completeDP" element={<CompleteDP />} />
