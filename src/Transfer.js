@@ -23,7 +23,8 @@ function Transfer() {
             });
       
             if (response.ok) {
-              navigate('/completeTF');
+              const data = await response.json();
+              navigate('/completeTF', {state : data.data.balance});
             } else {
               setError('금액을 다시 입력해주세요.');
             }
