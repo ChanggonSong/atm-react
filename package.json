@@ -21,7 +21,7 @@
     "deploy": "gh-pages -d build"
   },
   "proxy": "http://localhost:8080",
-  "homepage": "https://changgonsong.github.io/atm-react/",
+  "homepage": "https://changgonsong.github.io/",
   "eslintConfig": {
     "extends": [
       "react-app",
