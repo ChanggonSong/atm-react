@@ -24,8 +24,11 @@ function MainPage(){
 
                 if (response.ok) {
                     const data = await response.json();
-                    const { id, accountNum, balance } = data;
-                    localStorage.setItem('accountInfo', JSON.stringify({ id, accountNum, balance }));
+                    const { id, accountNum, balance } = data.data;
+                    // localStorage.setItem('accountInfo', JSON.stringify({ id, accountNum, balance }));
+                    localStorage.setItem('id', id);
+                    localStorage.setItem('accountNum', accountNum);
+                    localStorage.setItem('balance', balance);
                     // Handle response data (e.g., update state with account info)
                 } else {
                     setError('계정 정보를 가져올 수 없습니다.');

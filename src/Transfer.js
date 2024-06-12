@@ -15,7 +15,7 @@ function Transfer() {
 
     const handleTransfer = async () => {
         try {
-            const response = await axios.post(`/accounts/${id}/transfer`, {
+            const response = await axios.post(`/accounts/${localStorage.getItem('id')}/transfer`, {
                 receiverAccountNum,
                 amount: parseInt(amount)
             });
