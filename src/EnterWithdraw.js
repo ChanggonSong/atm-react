@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './EnterWithdraw.css';
 import logo from "./img/logo.png";
 
@@ -25,7 +25,7 @@ function EnterWithdraw() {
     }
 
     try {
-        const response = await fetch('/accounts/1/withdraw', {
+        const response = await fetch(`/accounts/${localStorage.getItem('id')}/withdraw`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
