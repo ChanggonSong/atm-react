@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from 'react-router-dom';
-import axios from "axios";
 import "./Transfer.css";
 import logo from "./img/logo.png";
 import background from "./img/background.png";
@@ -15,19 +14,21 @@ function Transfer() {
 
     const handleTransfer = async () => {
         try {
-            const response = await axios.post(`/accounts/${localStorage.getItem('id')}/transfer`, {
-                receiverAccountNum,
-                amount: parseInt(amount)
+            const response = await fetch(`/accounts/${localStorage.getItem('id')}/transfer`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({receiverAccountNum : receiverAccountNum, amount : amount}),
             });
-
-            if (response.data.success) {
-                // 이체 성공 처리
-                navigate('/completeTF', { state: { id, accountNum, balance: response.data.balance } });
+      
+            if (response.ok) {
+              navigate('/completeTF');
             } else {
-                setError(response.data.message);
+              setError('금액을 다시 입력해주세요.');
             }
         } catch (error) {
-            setError('이체 중 오류가 발생했습니다. 다시 시도해주세요.');
+            setError('서버 오류. 잠시 후 다시 시도해주세요.');
         }
     };
 
