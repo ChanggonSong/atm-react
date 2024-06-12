@@ -15,7 +15,7 @@ function MainPage(){
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`/accounts/own?userId=${id}`, {
+                const response = await fetch(`/accounts/own`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -24,11 +24,8 @@ function MainPage(){
 
                 if (response.ok) {
                     const data = await response.json();
-                    localStorage.setItem('accountInfo', JSON.stringify({
-                        id: data.id,
-                        accountNum: data.accountNum,
-                        balance: data.balance
-                    }));
+                    const { id, accountNum, balance } = data;
+                    localStorage.setItem('accountInfo', JSON.stringify({ id, accountNum, balance }));
                     // Handle response data (e.g., update state with account info)
                 } else {
                     setError('계정 정보를 가져올 수 없습니다.');
@@ -41,9 +38,23 @@ function MainPage(){
         fetchData();
     }, [id]);
 
-      const handleLogout = () => {
-        // 로그아웃 로직 구현
-        navigate('/login');
+    const handleLogout = async () => {
+        try {
+            const response = await fetch('/logout', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (response.ok) {
+                navigate('/login');
+            } else {
+                setError('로그아웃에 실패했습니다.');
+            }
+        } catch (error) {
+            setError('서버 오류. 잠시 후 다시 시도해주세요.');
+        }
     };
 
     const handleNavigation = (path) => {
