@@ -52,8 +52,8 @@
 }
 
 .login_button {
-    padding: 10px;
-    font-size: 14px;
+    padding: 9px;
+    font-size: 12px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -63,7 +63,7 @@
 
 .signup_link {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .signup_link a {
