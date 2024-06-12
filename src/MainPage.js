@@ -72,13 +72,13 @@ function MainPage(){
                     <div className={styles.main_bank_name}>ReAction Bank</div>
                     <div className={styles.logout} onClick={handleLogout}>로그아웃</div>
                 </div>
-                <div className={styles.greeting}>좋은 하루 보내세요, {id}님.</div>
+                <div className={styles.greeting}>좋은 하루 보내세요, {sessionStorage.getItem('loginUser')}님.</div>
             </div>
             
             <div className={styles.main_container}>
                 <div className={styles.account_container}>
-                    <div className={styles.account_number}>계좌번호 {accountNum}</div>
-                    <div className={styles.balance}>{balance} 원</div>
+                    <div className={styles.account_number}>계좌번호 {localStorage.getItem('accountNum')}</div>
+                    <div className={styles.balance}>{localStorage.getItem('balance')} 원</div>
                 </div>
                 <div className={styles.move_container}>
                     <div className={styles.enterDeposit} onClick={() => handleNavigation('/enterDP')}>입금하기</div>
