@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './EnterDeposit.css';
 import logo from "./img/logo.png";
 
@@ -25,7 +25,7 @@ function EnterDeposit() {
     }
 
     try {
-        const response = await fetch('/accounts/1/deposit', {
+        const response = await fetch(`/accounts/${localStorage.getItem('id')}/deposit`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
