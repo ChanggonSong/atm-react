@@ -62,11 +62,12 @@
     text-align: left;
 }
 .main_container {
+    background: rgb(34, 95, 195);
     display: flex;
     flex-direction: column;
 }
 .account_container {
-    background: white;
+    background: rgb(63, 116, 201);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-content: center;
     align-items: center;
@@ -80,7 +81,7 @@
     border-radius: 80px;
     border-width: 2px;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(255, 255, 255);
     margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
